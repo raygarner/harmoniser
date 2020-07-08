@@ -14,38 +14,23 @@
 
 #define MAXCHORDS 3
 
-enum pitch {
-    I,
-    II,
-    III,
-    IV,
-    V,
-    VI,
-    VII
-};
-
-enum role {
-    ROOT,
+enum interval {
+    SECOND = 1,
     THIRD,
+    FOURTH,
     FIFTH,
+    SIXTH,
+    SEVENTH
 };
 
 typedef struct Note {
     float duration;
-    int pitch;
+    int pitch; /* 1-7 */
 } Note;
-
-/* globals */
-int chords[7][3];
-
-/* init.c */
-int initChords();
 
 /* util.c */
 int applyInterval(int n, int interval);
 
 /* ui.c */
-char *getIcon(int n);
-int printChordDefs();
 
 #endif

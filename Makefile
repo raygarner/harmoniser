@@ -1,6 +1,6 @@
 FLAGS = -O3
 CC = gcc
-SRC = harm.c util.c init.c ui.c
+SRC = harm.c util.c ui.c
 EXES = harm
 
 all: clean harm
