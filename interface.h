@@ -5,14 +5,10 @@
 #include <stdio.h>
 
 /* defs */
-#define QUAVER 0.5
-#define CROTCHET 1
-#define DCROTCHET 1.5
-#define MINIM 2
-#define DMINIM 3
-#define SEMIBRIEVE 4
-
+#define END -1
 #define MAXCHORDS 3
+#define MAXLEN 256
+#define VOICES 4
 
 enum interval {
     SECOND = 1,
@@ -23,10 +19,12 @@ enum interval {
     SEVENTH
 };
 
-typedef struct Note {
-    float duration;
-    int pitch; /* 1-7 */
-} Note;
+enum voices {
+    SOP,
+    ALT,
+    TEN,
+    BAS
+};
 
 /* util.c */
 int applyInterval(int n, int interval);

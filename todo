@@ -1,3 +1,6 @@
+paper design
 define types
-make ui
-
+read melody from user
+generate viable chords for a note
+pick most appropriate chord based on prev chord
+print score
