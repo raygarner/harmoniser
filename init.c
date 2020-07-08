@@ -8,8 +8,8 @@ initChords()
 
     for (i = I; i <= VII; i++) {
         chords[i][ROOT] = i;
-        chords[i][THIRD] = getThird(i);  
-        chords[i][FIFTH] = getThird(chords[i][THIRD]);
+        chords[i][THIRD] = applyInterval(i, III);  
+        chords[i][FIFTH] = applyInterval(i, V);
     }
 
     return i;

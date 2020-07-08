@@ -2,7 +2,8 @@
 
 /* returns the note a third above n */
 int 
-getThird(int n)
+applyInterval(int n, int interval)
 {
-    return (n + 2) % 7;
+    return (n + interval) % 7;
 }
+

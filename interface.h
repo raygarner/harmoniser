@@ -12,6 +12,8 @@
 #define DMINIM 3
 #define SEMIBRIEVE 4
 
+#define MAXCHORDS 3
+
 enum pitch {
     I,
     II,
@@ -40,7 +42,7 @@ int chords[7][3];
 int initChords();
 
 /* util.c */
-int getThird(int n);
+int applyInterval(int n, int interval);
 
 /* ui.c */
 char *getIcon(int n);
