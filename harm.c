@@ -9,12 +9,9 @@ main(int argc, char **argv)
     last = readLine(notes);
     printLine(notes);
     */
-    int notes[PARTS][LEN], last;
+    int notes[PARTS][MAX], last;
 
     readLine(notes[0]);
-    readLine(notes[1]);
-    readLine(notes[2]);
-    readLine(notes[3]);
     printScore(notes);
 
     return 0;

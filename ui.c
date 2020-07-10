@@ -7,11 +7,13 @@ readLine(int notes[])
     char c;
     int i = 0;
 
+    printf("Enter the melody (1234567):\n|| ");
+
     while ((c = getchar()) != '\n') {
         notes[i] = atoi(&c);
         i++;
 
-        if (i >= LEN - 1)
+        if (i >= MAX - 1)
             break;
     }
     
@@ -36,7 +38,7 @@ printLine(int notes[])
 
 /* prints the entire score to the screen */
 int
-printScore(int notes[PARTS][LEN])
+printScore(int notes[PARTS][MAX])
 {
     int i;
 

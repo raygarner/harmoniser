@@ -8,7 +8,7 @@
 /* defs */
 #define LAST -1
 #define MAXCHORDS 3
-#define LEN 256
+#define MAX 256
 #define PARTS 4
 
 enum interval {
@@ -20,19 +20,13 @@ enum interval {
     SEVENTH
 };
 
-enum voices {
-    SOP,
-    ALT,
-    TEN,
-    BAS
-};
-
 /* util.c */
 int applyInterval(int note, int interval);
+int addATB(int notes[PARTS][MAX], int len);
 
 /* ui.c */
 int readLine(int notes[]);
 int printLine(int notes[]);
-int printScore(int notes[PARTS][LEN]);
+int printScore(int notes[][MAX]);
 
 #endif
