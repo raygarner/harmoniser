@@ -33,3 +33,16 @@ printLine(int notes[])
     putchar('\n');
     return i;
 }
+
+/* prints the entire score to the screen */
+int
+printScore(int notes[PARTS][LEN])
+{
+    int i;
+
+    for (i = 0; i < PARTS; i++) {
+        printLine(notes[i]);
+    }
+
+    return i;
+}

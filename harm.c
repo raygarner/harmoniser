@@ -3,10 +3,19 @@
 int 
 main(int argc, char **argv)
 {
-    int notes[LEN];
+    /*
+    int last, notes[LEN];
     
-    readLine(notes);
+    last = readLine(notes);
     printLine(notes);
+    */
+    int notes[PARTS][LEN], last;
+
+    readLine(notes[0]);
+    readLine(notes[1]);
+    readLine(notes[2]);
+    readLine(notes[3]);
+    printScore(notes);
 
     return 0;
 }

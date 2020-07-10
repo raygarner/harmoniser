@@ -33,5 +33,6 @@ int applyInterval(int note, int interval);
 /* ui.c */
 int readLine(int notes[]);
 int printLine(int notes[]);
+int printScore(int notes[PARTS][LEN]);
 
 #endif
