@@ -3,12 +3,13 @@
 
 /* libs */
 #include <stdio.h>
+#include <stdlib.h>
 
 /* defs */
-#define END -1
+#define LAST -1
 #define MAXCHORDS 3
-#define MAXLEN 256
-#define VOICES 4
+#define LEN 256
+#define PARTS 4
 
 enum interval {
     SECOND = 1,
@@ -27,8 +28,10 @@ enum voices {
 };
 
 /* util.c */
-int applyInterval(int n, int interval);
+int applyInterval(int note, int interval);
 
 /* ui.c */
+int readLine(int notes[]);
+int printLine(int notes[]);
 
 #endif

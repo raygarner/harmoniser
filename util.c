@@ -2,8 +2,8 @@
 
 /* returns the note a third above n */
 int 
-applyInterval(int n, int interval)
+applyInterval(int n, int i)
 {
-    return (n + interval) % 7;
+    return (n + i) % 7;
 }
 
